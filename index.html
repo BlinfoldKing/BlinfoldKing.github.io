@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Blinfoldking</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
@@ -23,34 +23,41 @@
         * {
             /* border: solid red 3px; */
             margin: 0;
+            color: #eee;
+            
         }
 
         body {
             height: 100%;
             background: linear-gradient(to right, #333, #000);
-            color: #fff;
         }
 
         .hello {
-            text-align: left;
+            text-align: right;
         }
 
         .fab {
-            color: #fff;
             font-size: 40px;
-            margin: 10px;
+            margin: 10px 2% 0 0;
         }
 
         .fab:hover {
-            color: #ff3355  ;
+            color: #ff3355;
+        }
+
+        .red {
+            color: #ff0033;
         }
         
         .center {
+            filter: drop-shadow(0 10px 5px black);
             transform: translateY(175%);
             text-align: center;
             overflow: hidden;
             position: relative;
-            top: 50%;
+            /* top: 50%; */
+            width: 100%;
+            height: 75%;
         }
 
         h1 {
@@ -63,21 +70,40 @@
         h2 {
             letter-spacing: 20px;
             font-family: Infinity;
-            background: linear-gradient(to right, #333, #ff0033, #000)
+            background: linear-gradient(to right, rgba(3, 3, 3, 0), #ff0033, rgba(0, 0, 0, 0))
+        }
+
+        .bg {
+            background-image: url('./pic/city.jpg');            
+            filter: contrast(150%) brightness(50%) grayscale(70%) saturate(400%) ;
+            background-size:cover;
+            position: absolute;
+            z-index: -1;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+
+        .icons {
+            flex: 1;
+            justify-content: space-between;
         }
 
     </style>
 
 </head>
 <body>
-
+        <div class="bg"></div>
+    
     <div class="center">
         <i class="hello">hello, i am</i>
-        <h1>DANU</h1>
+        <h1>D<span class="red">A</span>NU</h1>
         <h2>Blinfoldking</h2>
-        <a href="https://github.com/blinfoldking"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ganeshad/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://medium.com/@ganeshadanu1"><i class="fab fa-medium"></i></a>
+        <div class="icons">
+            <a href="https://github.com/blinfoldking"><i class="fab fa-github-square"></i></a>
+            <a href="https://www.linkedin.com/in/ganeshad/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@ganeshadanu1"><i class="fab fa-medium"></i></a>
+        </div>
     </div>
     
 </body>

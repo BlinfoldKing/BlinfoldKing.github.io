@@ -21,9 +21,11 @@
         }
 
         * {
-            /* border: solid red 3px; */
+            /* border: solid white 3px; */
             margin: 0;
             color: #eee;
+            padding: 0;
+            /* background-color: #363636;                         */
             
         }
 
@@ -37,9 +39,9 @@
             text-align: right;
             padding: 3px 10px 3px 3px;
             margin: 0 auto 0 auto;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
             min-width: 100px;
-            width: 10%;
+            width: 13%;
         }
 
         .icon {
@@ -55,22 +57,36 @@
             color: #ff0033;
         }
         
+        .last-letter {
+            letter-spacing: 0;
+            margin-right: 0;
+        }
+
+        .header {
+           
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            min-height: 960px;
+            height: 100%;
+        }
+
         .center {
             filter: drop-shadow(0 10px 5px black);
-            transform: translateY(175%);
             text-align: center;
             overflow: hidden;
             position: relative;
-            /* top: 50%; */
             width: 100%;
-            height: 75%;
+            height: 100%;
         }
 
         h1 {
+            letter-spacing:20px;
             font-size: 60px;
             margin: 0;
             font-family: Anurati;
-            letter-spacing: 20px;
+            background-color: inherit;
         }
         
         h2 {
@@ -80,37 +96,61 @@
         }
 
         .bg {
-            background-image: url('./pic/city.jpg');            
+             /* border: solid red 3px;             */
+             background-image: url('./pic/city.jpg');            
             filter: contrast(150%) brightness(50%) grayscale(70%) saturate(400%) ;
+            background-attachment: fixed;
+            background-repeat: no-repeat;            
             background-size:cover;
-            position: absolute;
-            z-index: -1;
-            background-repeat: no-repeat;
-            width: 100%;
+            min-height: 960px;
             height: 100%;
+            z-index: -1;
+            width: 100%;
+            position: fixed;
         }
 
         .icons {
             margin-top: 1%;
         }
 
+        .dark-p {
+            padding: 100px; 
+            background-color: #333;
+            filter: drop-shadow(0 -10px 100px black)
+        }
+
+        .red-p {
+            padding: 100px; 
+            background-color: #ff0033;
+            filter: drop-shadow(0 -10px 100px black)
+        }
+
     </style>
 
 </head>
 <body>
+
+    <div class="header">
         <div class="bg"></div>
-    
-    <div class="center">
-        <h3 class="hello">hello, I am</h3>
-        <h1>D<span class="red">A</span>NU</h1>
-        <h2>Blinfoldking</h2>
-        <div class="icons">
-            <a class="icon" target="_blank" href="https://github.com/blinfoldking"><i class="fab fa-github-square"></i></a>
-            <a class="icon" target="_blank" href="https://www.linkedin.com/in/ganeshad/"><i class="fab fa-linkedin"></i></a>
-            <a class="icon" target="_blank" href="https://medium.com/@ganeshadanu1"><i class="fab fa-medium"></i></a>
-            <a class="icon" target="_blank" href="mailto:ganeshadanu1@gmail.com"><i class="fas fa-envelope-square"></i></a>
+        <div class="center">
+            <h3 class="hello">hello, I am</h3>
+            <h1>D<span class="red">A</span>N<span class="last-letter">U</span></h1>
+            <h2>Blinfoldking</h2>
+            <div class="icons">
+                <a class="icon" target="_blank" href="https://github.com/blinfoldking"><i class="fab fa-github-square"></i></a>
+                <a class="icon" target="_blank" href="https://www.linkedin.com/in/ganeshad/"><i class="fab fa-linkedin"></i></a>
+                <a class="icon" target="_blank" href="https://medium.com/@ganeshadanu1"><i class="fab fa-medium"></i></a>
+                <a class="icon last-letter" target="_blank" href="mailto:ganeshadanu1@gmail.com"><i class="fas fa-envelope-square"></i></a>
+            </div>
         </div>
     </div>
+
+    
+
+    <div class="red-p">
+        <h1 style="text-decoration: underline;">UNDER CONSTRUCTION</h1>
+    </div>
+
     
 </body>
 </html>

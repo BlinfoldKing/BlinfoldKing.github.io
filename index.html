@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="icon" href="pic/github-logo.png" type="image/x-icon"/>
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+			  crossorigin="anonymous"></script>
+    
     <style>
     
         @font-face {
@@ -25,6 +30,7 @@
             margin: 0;
             color: #eee;
             padding: 0;
+            box-sizing: border-box;
             /* background-color: #363636;                         */
             
         }
@@ -97,7 +103,7 @@
 
         .bg {
              /* border: solid red 3px;             */
-             background-image: url('./pic/city.jpg');            
+            background-image: url('./pic/city.jpg');            
             filter: contrast(150%) brightness(50%) grayscale(70%) saturate(400%) ;
             background-attachment: fixed;
             background-repeat: no-repeat;            
@@ -114,15 +120,81 @@
         }
 
         .dark-p {
-            padding: 100px; 
-            background-color: #333;
+            background-color: #000;
             filter: drop-shadow(0 -10px 100px black)
         }
 
         .red-p {
-            padding: 100px; 
             background-color: #ff0033;
             filter: drop-shadow(0 -10px 100px black)
+        }
+        
+        .do {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .do-item {
+            width: 100%;
+            margin: 5%;            
+        }
+
+        #bg1 {
+            background-image: url('./pic/code.jpg');
+            background-repeat: no-repeat;  
+            background-size: cover;
+            background-position: center;                      
+            filter: contrast(150%) brightness(50%) grayscale(30%);            
+            box-shadow: inset 0px 0px 50px #000;
+            content: " ";
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        #bg2 {
+            background-image: url('./pic/typing.jpg');
+            background-repeat: no-repeat;  
+            background-size: cover;
+            background-position: center;                      
+            filter: contrast(150%) brightness(50%) grayscale(30%);            
+            box-shadow: inset 0px 0px 50px #000;
+            content: " ";
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        .content {
+            text-align: center; 
+            top: -50%;
+            position: relative;
+            background-color: #000;
+            letter-spacing: 5px;
+            font-family: Infinity, Arial, Helvetica, sans-serif;
+            padding: 10px;            
+            filter: drop-shadow(0 10px 5px black);
+            
+        }
+        
+        .content-item {
+            margin:15px auto 0 auto;
+            background-color: rgba(255, 00, 33, 0.7);
+            width: 150px;
+            letter-spacing: 0px;
+            padding: 10px;
+        }
+
+        #bg1.blurred {
+            filter: contrast(150%) brightness(50%) grayscale(30%) blur(3px);            
+        }
+        
+        #bg2.blurred {
+            filter: contrast(150%) brightness(50%) grayscale(30%) blur(3px);            
+        }
+
+        a {
+            text-decoration: none;
         }
 
     </style>
@@ -147,10 +219,59 @@
 
     
 
-    <div class="red-p">
-        <h1 style="text-decoration: underline;">UNDER CONSTRUCTION</h1>
+    <div class="red-p" style="text-align: center; padding: 100px 0">
+        <h1 style="background-color: #000; padding: 30px">HELLO WORLD</h1>
+        <div style="padding: 0 20%">
+            <img src="https://avatars1.githubusercontent.com/u/24368528?s=400&u=365c7572485b0d9cfe081e68fc4716135fa85780&v=4" alt="" width="200px" style="border-radius: 50%; border: white solid 10px; margin: 30px">
+            <h3 style="padding: 20px; border-bottom: solid white 2px;border-top: solid white 2px;letter-spacing: 5px;font-size: 30px;font-family: Infinity, Arial, Helvetica, sans-serif">
+                My name is Ganesha Danu, informatics Engineering student from Telkom University Indonesia
+            </h3>
+        </div>
     </div>
 
+    <div class="center" style="margin-top: 10%">
+        <h2>WHAT  I DO</h2>
+    </div>
+
+    <div class="do">
+        <div class="do-item">
+            <div id="bg1">
+                
+            </div>
+            <div class="content">
+                <h3>I Code Stuff</h3>            
+            </div>
+            <div class="content content-item">
+                <h3>
+                    <a target="_blank" id="c1" href="https://github.com/blinfoldking">Click Here</a>
+                </h3>
+            </div>
+        </div>
+        <div class="do-item">
+            <div id="bg2">
+            </div>
+            <div class="content">
+                <h3>I Write Stuff</h3>
+            </div>
+            <div class="content content-item">
+                <h3>
+                    <a id="c2" target="_blank" href="https://blinfoldking.github.io/Blog/">Click Here</a>
+                </h3>
+            </div>
+                
+        </div>
+    </div>
+
+    <script>
+        $('#c1').hover(() => {
+            $('#bg1').toggleClass('blurred')
+        })
+
+        $('#c2').hover(() => {
+            $('#bg2').toggleClass('blurred')
+        })
+    </script>
+    
     
 </body>
 </html>
